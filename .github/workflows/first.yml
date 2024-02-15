@@ -1,0 +1,14 @@
+name: First Project
+on: push
+jobs:
+   test:
+     runs-on: ubuntu-latest
+     steps:
+        - name: checkout the code
+          uses: action/checkout@v3
+        - name: installing NOde JS
+          uses: action/setup-node@v3
+        - name: installing the dependiences
+          run: npm install
+        - name: run test
+          run: npm run
